@@ -1,0 +1,100 @@
+{
+  "discordClientId": "PUT_YOUR_DISCORD_APPLICATION_CLIENT_ID_HERE",
+  "enabled": true,
+  "pollIntervalMs": 2000,
+  "onlyAppleMusic": true,
+  "playerPatterns": [
+    "Apple Music",
+    "AppleMusic",
+    "AppleInc.AppleMusic",
+    "AppleInc.iTunes"
+  ],
+  "showPaused": false,
+  "activityType": 2,
+  "activityNameTemplate": "{player}",
+  "statusDisplayType": 0,
+  "includeAlbumInState": true,
+  "artworkMode": "off",
+  "artworkCountry": "US",
+  "artworkSize": 600,
+  "artworkCacheTtlMs": 86400000,
+  "artworkSearchLimit": 5,
+  "foregroundClientId": "",
+  "foregroundEnabled": false,
+  "foregroundPollIntervalMs": 1500,
+  "foregroundPrimaryMonitorOnly": true,
+  "foregroundShowUnknownApps": false,
+  "foregroundBrowserInspectorEnabled": true,
+  "foregroundBrowserDebuggingPorts": [9222, 9223],
+  "foregroundYouTubeButtons": true,
+  "foregroundYouTubeTimestamps": true,
+  "listenAlong": {
+    "enabled": false,
+    "targetDiscordUserId": "",
+    "destination": "youtubeMusic",
+    "browserDebuggingPorts": [9222, 9223],
+    "syncIntervalMs": 2000,
+    "missingGraceMs": 5000,
+    "driftToleranceMs": 3000,
+    "minimumRemainingMs": 5000,
+    "searchTimeoutMs": 12000
+  },
+  "foregroundRules": [
+    {
+      "processNames": ["codex"],
+      "name": "Codex",
+      "type": 0,
+      "details": "Talking to Codex",
+      "statusDisplayType": 2,
+      "largeImage": "https://www.google.com/s2/favicons?domain=openai.com&sz=256",
+      "largeText": "Codex"
+    },
+    {
+      "processNames": ["chrome", "msedge", "brave", "firefox"],
+      "titleIncludes": ["youtube"],
+      "name": "YouTube",
+      "type": 3,
+      "details": "Watching YouTube",
+      "stateTemplate": "{youtubeTitle}",
+      "statusDisplayType": 2,
+      "largeImage": "https://www.google.com/s2/favicons?domain=youtube.com&sz=256",
+      "largeText": "YouTube"
+    },
+    {
+      "processNames": ["chrome", "msedge", "brave", "firefox"],
+      "titleIncludes": ["amazon.in", "amazon"],
+      "name": "Amazon.in",
+      "type": 0,
+      "details": "Browsing Amazon.in",
+      "stateTemplate": "{amazonTitle}",
+      "statusDisplayType": 2,
+      "largeImage": "https://www.google.com/s2/favicons?domain=amazon.in&sz=256",
+      "largeText": "Amazon.in"
+    },
+    {
+      "processNames": ["brave"],
+      "name": "Brave",
+      "type": 0,
+      "details": "Browsing Brave",
+      "statusDisplayType": 2,
+      "largeImage": "https://www.google.com/s2/favicons?domain=brave.com&sz=256",
+      "largeText": "Brave"
+    },
+    {
+      "processNames": ["steam", "steamwebhelper"],
+      "name": "Steam",
+      "type": 0,
+      "details": "{steamActivity}",
+      "stateTemplate": "{steamTitle}",
+      "statusDisplayType": 2,
+      "largeImage": "https://www.google.com/s2/favicons?domain=store.steampowered.com&sz=256",
+      "largeText": "Steam"
+    }
+  ],
+  "largeImageKey": "",
+  "albumImageKeys": {
+    "Tame Impala - Currents": "currents"
+  },
+  "largeImageTextTemplate": "{album}",
+  "logLevel": "info"
+}

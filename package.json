@@ -1,0 +1,29 @@
+{
+  "name": "local-apple-music-discord-presence",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Windows music presence bridge with opt-in cross-service Discord listen-along.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elec7r1fy/discord-music-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Elec7r1fy/discord-music-detector/issues"
+  },
+  "homepage": "https://github.com/Elec7r1fy/discord-music-detector#readme",
+  "scripts": {
+    "start": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/start-music-presence.ps1",
+    "presence:music": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/start-music-presence.ps1",
+    "presence:background": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/start-background-presence.ps1",
+    "presence:off": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/stop-all-presence.ps1",
+    "start:foreground": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/start-background-presence.ps1",
+    "debug:music": "node src/index.js",
+    "debug:background": "node src/foregroundPresence.js",
+    "listen-along": "node src/listenAlong.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
