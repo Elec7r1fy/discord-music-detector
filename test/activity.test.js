@@ -70,7 +70,7 @@ test("buildActivity formats title, artist, album, and timestamps", () => {
   });
 });
 
-test("buildActivity can use the artist for the compact Discord activity label", () => {
+test("buildActivity separates the Apple Music profile header from the artist status", () => {
   const activity = buildActivity(
     {
       sourceAppUserModelId: "AppleInc.AppleMusicWin_nzyj5cx40ttqa!App",
@@ -80,11 +80,15 @@ test("buildActivity can use the artist for the compact Discord activity label", 
     },
     {
       ...baseConfig,
-      activityNameTemplate: "{artist}"
+      activityNameTemplate: "{player}",
+      statusDisplayType: 1,
+      includeAlbumInState: false
     }
   );
 
-  assert.equal(activity.name, "Artist");
+  assert.equal(activity.name, "Apple Music");
+  assert.equal(activity.state, "Artist");
+  assert.equal(activity.status_display_type, 1);
 });
 
 test("buildActivity clears paused tracks by default", () => {
