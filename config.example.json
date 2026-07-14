@@ -11,7 +11,7 @@
   ],
   "showPaused": false,
   "activityType": 2,
-  "activityNameTemplate": "{player}",
+  "activityNameTemplate": "{artist}",
   "statusDisplayType": 0,
   "includeAlbumInState": true,
   "artworkMode": "off",

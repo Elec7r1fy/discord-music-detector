@@ -70,7 +70,7 @@ test("buildActivity formats title, artist, album, and timestamps", () => {
   });
 });
 
-test("buildActivity can label an Apple Music session as Apple Music", () => {
+test("buildActivity can use the artist for the compact Discord activity label", () => {
   const activity = buildActivity(
     {
       sourceAppUserModelId: "AppleInc.AppleMusicWin_nzyj5cx40ttqa!App",
@@ -80,11 +80,11 @@ test("buildActivity can label an Apple Music session as Apple Music", () => {
     },
     {
       ...baseConfig,
-      activityNameTemplate: "{player}"
+      activityNameTemplate: "{artist}"
     }
   );
 
-  assert.equal(activity.name, "Apple Music");
+  assert.equal(activity.name, "Artist");
 });
 
 test("buildActivity clears paused tracks by default", () => {

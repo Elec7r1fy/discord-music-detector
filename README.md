@@ -150,8 +150,8 @@ The app checks these keys in order: `Artist - Album`, `Album`, `Artist - Song`, 
 - `playerPatterns`: App identifiers used to recognize Apple Music.
 - `showPaused`: Defaults to `false`, matching Spotify-like behavior.
 - `activityType`: Defaults to `2`, Discord's Listening activity type.
-- `activityNameTemplate`: Defaults to `{player}`, which asks Discord to show `Listening to Apple Music` for an Apple Music session.
-- `statusDisplayType`: Defaults to `0`, which asks Discord's member list to use the activity name. Use `1` to show `state`, or `2` to show the song title from `details`.
+- `activityNameTemplate`: Defaults to `{artist}`, so Discord's compact server/member-list activity shows the artist, such as `Metro Boomin`.
+- `statusDisplayType`: Defaults to `0`, which asks Discord's member list to use that artist activity name. The expanded profile card still uses the Discord application's registered name for its `Listening to Apple Music` header.
 - `includeAlbumInState`: Appends album text after the artist.
 - `artworkMode`: Defaults to `off`. Set to `itunes` for automatic album banners from Apple's public Search API.
 - `artworkCountry`: Storefront country for automatic artwork lookup, such as `US` or `IN`.

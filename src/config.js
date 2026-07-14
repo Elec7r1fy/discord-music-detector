@@ -12,7 +12,7 @@ const DEFAULT_CONFIG = {
   playerPatterns: ["Apple Music", "AppleMusic", "AppleInc.AppleMusic", "AppleInc.iTunes"],
   showPaused: false,
   activityType: 2,
-  activityNameTemplate: "{player}",
+  activityNameTemplate: "{artist}",
   statusDisplayType: 0,
   includeAlbumInState: true,
   artworkMode: "off",
